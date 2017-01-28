@@ -25,7 +25,7 @@ namespace FrenchChars
         {
             get
             {
-                return _letters.Count; 
+                return _letters.Count;
             }
         }
 
@@ -84,7 +84,7 @@ namespace FrenchChars
 
         public bool TryGetValue(string key, out Letter value)
         {
-             return _letters.TryGetValue(key, out value);
+            return _letters.TryGetValue(key, out value);
         }
 
         IEnumerator<KeyValuePair<string, Letter>> IEnumerable<KeyValuePair<string, Letter>>.GetEnumerator()
