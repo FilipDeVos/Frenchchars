@@ -1,0 +1,96 @@
+﻿<Window x:Class="FrenchChars.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrenchChars"
+        xmlns:commands="clr-namespace:FrenchChars"
+        xmlns:p="clr-namespace:FrenchChars.Properties"
+        mc:Ignorable="d"
+        Title="Click the letter to put it on your clipboard" 
+        Height="640" 
+        Width="380"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        ResizeMode="NoResize"
+        Left="{Binding Source={x:Static p:Settings.Default}, Path=Left, Mode=TwoWay}"
+        Top="{Binding Source={x:Static p:Settings.Default}, Path=Top, Mode=TwoWay}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" 
+        Closed="Window_Closed">
+        <WrapPanel Margin="8">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">á</TextBlock>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="1" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">â</TextBlock>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="2" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">ä</TextBlock>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="3" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">æ</TextBlock>
+            </Button>
+
+            <Button  Grid.Row="1" Grid.Column="0" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">ç</TextBlock>
+            </Button>
+
+            <Button  Grid.Row="2" Grid.Column="0" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">é</TextBlock>
+            </Button>
+            <Button Grid.Row="2" Grid.Column="1" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">è</TextBlock>
+            </Button>
+            <Button Grid.Row="2" Grid.Column="2" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">ê</TextBlock>
+            </Button>
+            <Button Grid.Row="2" Grid.Column="3" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">ë</TextBlock>
+            </Button>
+
+            <Button Grid.Row="3" Grid.Column="0" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">î</TextBlock>
+            </Button>
+            <Button Grid.Row="3" Grid.Column="1" Padding="20" Margin="8" Height="80" Width="70" >
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">ï</TextBlock>
+            </Button>
+
+            <Button Grid.Row="4" Grid.Column="0" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">ô</TextBlock>
+            </Button>
+            <Button Grid.Row="4" Grid.Column="1" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">œ</TextBlock>
+            </Button>
+
+            <Button Grid.Row="5" Grid.Column="0" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">ù</TextBlock>
+            </Button>
+            <Button Grid.Row="5" Grid.Column="1" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">û</TextBlock>
+            </Button>
+            <Button Grid.Row="5" Grid.Column="2" Padding="20" Margin="8" Height="80" Width="70" Command="commands:CopyCommand.Instance" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" TextAlignment="Center">ü</TextBlock>
+            </Button>
+        </Grid>
+    </WrapPanel>
+</Window>
