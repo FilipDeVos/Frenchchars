@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>FrenchChars</id>
+    <version>$version$</version>
+    <title>FrenchChars</title>
+    <authors>Foxtricks</authors>
+    <owners>Foxtricks</owners>
+    <licenseUrl>https://cdn.rawgit.com/FilipDeVos/Frenchchars/479a1442/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/FilipDeVos/Frenchchars</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/FilipDeVos/Frenchchars/dev/Images/Icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Frenchchars is a small wpf application that allows you to quickly put french special characters on the clipboard.</description>
+    <releaseNotes>Initial Release.</releaseNotes>
+    <copyright>Copyright © foxtricks 2017</copyright>
+  </metadata>
+  <files>
+    <file src="bin\Release\DeltaCompressionDotNet.dll" target="lib\net45" />
+    <file src="bin\Release\DeltaCompressionDotNet.MsDelta.dll" target="lib\net45" />
+    <file src="bin\Release\DeltaCompressionDotNet.PatchApi.dll" target="lib\net45" />          
+    <file src="bin\Release\FrenchChars.exe" target="lib\net45" />                             
+    <file src="bin\Release\FrenchChars.exe.config" target="lib\net45" />                     
+    <file src="bin\Release\ICSharpCode.SharpZipLib.dll" target="lib\net45" />               
+    <file src="bin\Release\ICSharpCode.SharpZipLib.xml" target="lib\net45" />              
+    <file src="bin\Release\MaterialDesignColors.dll" target="lib\net45" />              
+    <file src="bin\Release\MaterialDesignThemes.Wpf.dll" target="lib\net45" />           
+    <file src="bin\Release\Mono.Cecil.dll" target="lib\net45" />            
+    <file src="bin\Release\Mono.Cecil.Mdb.dll" target="lib\net45" />           
+    <file src="bin\Release\Mono.Cecil.Pdb.dll" target="lib\net45" />            
+    <file src="bin\Release\Mono.Cecil.Rocks.dll" target="lib\net45" />            
+    <file src="bin\Release\NuGet.Squirrel.dll" target="lib\net45" />          
+    <file src="bin\Release\Splat.dll" target="lib\net45" />          
+    <file src="bin\Release\Squirrel.dll" target="lib\net45" />          
+  </files>
+</package>

@@ -9,23 +9,29 @@ namespace FrenchChars
 {
     internal class LetterJumpList
     {
-        private readonly Assembly _application;
+        private readonly Assembly _applicationAssembly;
+        private readonly Application _application;
 
-        public LetterJumpList()
+        public LetterJumpList() : this(Application.Current)
         {
-            _application = GetApplication();
+            _applicationAssembly = GetApplication();
         }
 
-        public void Create()
+        public LetterJumpList(Application application)
+        {
+            _application = application;
+        }
+
+        public JumpList Create()
         {
             JumpList jumpList = new JumpList();
-            JumpList.SetJumpList(Application.Current, jumpList);
+            JumpList.SetJumpList(_application, jumpList);
             jumpList.JumpItems.AddRange(GetJumpTasks(new Letters().Select(x=>x.Value).Where(y => y.IsCommon)));
             jumpList.JumpItems.Add(GetClearFormattingTask());
-            jumpList.Apply();
+            return jumpList;
         }
 
-        private IEnumerable<JumpTask> GetJumpTasks(IEnumerable<Letter> letters)
+        internal IEnumerable<JumpTask> GetJumpTasks(IEnumerable<Letter> letters)
         {
             foreach (var letter in letters)
             {
@@ -33,28 +39,28 @@ namespace FrenchChars
                 {
                     Title = $"Copy {letter}...",
                     Description = $"Copy the letter {letter} to the clipboard.",
-                    ApplicationPath = _application.Location,
+                    ApplicationPath = _applicationAssembly.Location,
                     Arguments = $"{letter}",
-                    IconResourcePath = _application.Location,
+                    IconResourcePath = _applicationAssembly.Location,
                     IconResourceIndex = -1
                 };
             }
         }
 
-        private JumpTask GetClearFormattingTask()
+        internal JumpTask GetClearFormattingTask()
         {
             return new JumpTask
             {
                 Title = $"Clear Formatting...",
                 Description = $"Clear the formatting from the text on the clipboard.",
-                ApplicationPath = _application.Location,
+                ApplicationPath = _applicationAssembly.Location,
                 Arguments = $"clear",
-                IconResourcePath = _application.Location,
+                IconResourcePath = _applicationAssembly.Location,
                 IconResourceIndex = -1
             };
         }
 
-        private static Assembly GetApplication() {
+        internal static Assembly GetApplication() {
             return (AppDomain.CurrentDomain
                     .GetAssemblies()
                     .Where(item => item.EntryPoint != null)

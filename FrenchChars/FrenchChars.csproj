@@ -119,6 +119,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="ClipboardHandler.cs" />
     <Compile Include="HiddenWindow.xaml.cs">
       <DependentUpon>HiddenWindow.xaml</DependentUpon>
     </Compile>
